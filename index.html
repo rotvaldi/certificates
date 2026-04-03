@@ -1,13 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate Link</title>
+    <title>Mis Certificados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .certificate-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            padding: 25px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .certificate-card h2 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+        
+        .certificate-card p {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .certificate-card .date {
+            font-size: 0.85em;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: white;
+            color: #667eea;
+        }
+    </style>
 </head>
 <body>
-    <h1>Your Certificate</h1>
-    <p>Click the link below to view your PDF certificate:</p>
-    <a href="Certificate%20awarded%20by%20the%20International%20Organization%20for%20Migration%20(IOM)%20in%20Data%20for%20Policymaking%2C%20Risk%20Analysis%20and%20Intelligence.pdf">View Certificate</a>
+    <div class="container">
+        <h1>🎓 Mis Certificados</h1>
+        <p class="subtitle">Mis credenciales y certificaciones profesionales</p>
+        
+        <div class="certificates-grid">
+            <!-- CERTIFICADO 1 -->
+            <a href="Certificate%20awarded%20by%20the%20International%20Organization%20for%20Migration%20(IOM)%20in%20Data%20for%20Policymaking%2C%20Risk%20Analysis%20and%20Intelligence.pdf" class="certificate-card" target="_blank">
+                <div>
+                    <h2>Data for Policymaking</h2>
+                    <p>International Organization for Migration (IOM)</p>
+                    <div class="date">📅 2026</div>
+                </div>
+                <button class="btn">Ver Certificado →</button>
+            </a>
+            
+            <!-- AGREGAR MÁS CERTIFICADOS AQUÍ -->
+        </div>
+    </div>
 </body>
 </html>
